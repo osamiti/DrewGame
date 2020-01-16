@@ -1,18 +1,22 @@
-//  build for Qt
 {
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "Build Hello",
-            "type": "shell",
-            "command": "qmake",
-            "args": [
-                "main.pro", "&&", "make", "&&", "${workspaceFolder}/main.exe"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+      {
+        "label": "Build with GCC",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-std=c++11",
+          "-stdlib=libc++",
+          "helloworld.cpp",
+          "-o",
+          "helloworld.out",
+          "--debug"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
         }
+      }
     ]
-}
+  }
