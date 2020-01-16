@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main (void)
+int main ()
 {
     vector<string> msg { "Hello", "C++", "World" };
 
@@ -12,6 +12,5 @@ int main (void)
     {
         cout << word << " ";
     }
-    cout << 123 ;
-    return 0;
+    cout << endl;
 }
